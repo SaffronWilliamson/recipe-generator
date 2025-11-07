@@ -20,9 +20,9 @@ public class RecipeApp {
         String[] preferences = InputHandler.getUserPreferences();
 
         //generate recipe based on user preferences
-        String recipe = InputHandler.generateRecipe(preferences);
+        Recipe recipe = InputHandler.generateRecipe(preferences);
         //print recipe
-        System.out.println("Based on your preferences this is the recipe we have generated: " + recipe);
+        recipe.displayRecipe();
 
         //close scanner
         scanner.close();

@@ -47,23 +47,23 @@ public class Recipe {
     public void displayRecipe() {
         System.out.println("Recipe: " + name);
 
-        System.out.println("Spice Level: ");
+        System.out.print("Spice Level: ");
         if (spiceLevel == 0){
-            System.out.println("Mild \uD83E\uDDCA");
+            System.out.print("Mild \uD83E\uDDCA");
         } else {
             for(int i = 0; i < spiceLevel; i++) {
                 System.out.print("\uD83C\uDF36\uFE0F");
             }
         }
 
-        System.out.println("Serves: " + serves);
+        System.out.println("\nServes: " + serves);
         System.out.println("Calories: " + calories);
         System.out.println("Cooking Time: " + cookingTime + " minutes");
         System.out.println("Ingredients: ");
         for (String ingredient : ingredients) {
             System.out.println("- " + ingredient);
         }
-        System.out.println("Instructions: " + instructions);
+        System.out.println("Instructions:\n" + instructions);
     }
 }
 
