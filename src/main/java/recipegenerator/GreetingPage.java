@@ -3,19 +3,17 @@ package recipegenerator;
 import java.util.Scanner;
 
 public class GreetingPage {
-    public static boolean showGreetingPage() {
-        //import scanner
-        Scanner scanner = new Scanner(System.in);
+    public static boolean showGreetingPage(Scanner scanner) {
         //welcome message
         System.out.println("Welcome to the Recipe Generator!");
         //first name
         System.out.print("Before we get started, please enter your first name: ");
-        String FirstName = scanner.nextLine();
+        String firstName = scanner.nextLine();
         //ask user if they want to continue
-        System.out.println("Hey " + FirstName + "! Are you ready to generate a recipe?");
+        System.out.println("Hey " + firstName + "! Are you ready to generate a recipe?");
         System.out.print("Please enter 'yes' or 'no': ");
 
-        //povide message if user wants to continue or not
+        //provide message if user wants to continue or not
         while (true) {
             String answer = scanner.nextLine();
             if (answer.equalsIgnoreCase("yes")) {

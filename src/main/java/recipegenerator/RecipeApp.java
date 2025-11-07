@@ -7,7 +7,7 @@ public class RecipeApp {
         Scanner scanner = new Scanner(System.in);
 
         //show greeting page
-        boolean continueProgramme = GreetingPage.showGreetingPage();
+        boolean continueProgramme = GreetingPage.showGreetingPage(scanner);
 
         //end programme if user does not want to continue and close scanner
         if (!continueProgramme) {
