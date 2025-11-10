@@ -20,7 +20,7 @@ public class Recipe {
         this.instructions = instructions;
     }
 
-    //getters
+    //getters - won't change so doesn't need setters
     public String getName() {
         return name;
     }
