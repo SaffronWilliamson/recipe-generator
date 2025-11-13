@@ -25,8 +25,27 @@ public class RecipeApp {
         //print recipe
         recipe.displayRecipe();
 
+        String response = "";
+        System.out.println("Would you like a bonus random recipe? (yes/no)");
+        while(true) {
+            response = scanner.nextLine().toLowerCase();
+
+            if (response.equals("yes")){
+                Recipe randomRecipe = InputHandler.getRandomRecipe();
+                randomRecipe.displayRecipe();
+                break;
+            } else if (response.equals("no")){
+                System.out.println("No Problem. Happy Cooking!");
+                break;
+            } else {
+                System.out.print("Invalid input. Please enter 'yes' or 'no': ");
+
+            }
+        }
 
         scanner.close();
 
     }
 }
+
+//TODO - make sure random recipe isn't the same as the previous recipe displayed

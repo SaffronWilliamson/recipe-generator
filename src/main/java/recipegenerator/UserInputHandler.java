@@ -136,13 +136,10 @@ public class UserInputHandler {
 }
 
 
-//decided this was the best way to handle user input for preferences
-
 /*
 TODO
 -make this page look nicely presented
 -error handle
 -make sure inputs/outputs and clear and readable in the console
--fill in with the proper recipes
  */
 
