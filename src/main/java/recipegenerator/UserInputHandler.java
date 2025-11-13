@@ -133,7 +133,32 @@ public class UserInputHandler {
 
         return everyRecipe[(int)(Math.random() * everyRecipe.length)];
     }
+
+    public void displayRandomRecipe(Recipe originalRecipe){
+        String response;
+        System.out.println("Would you like a bonus random recipe? (yes/no)");
+        while(true) {
+            response = scanner.nextLine().toLowerCase();
+
+            if (response.equals("yes")){
+                Recipe randomRecipe;
+                // do while loop to ensure the random recipe isn't the same as the recipe before
+                do {
+                    randomRecipe = getRandomRecipe();
+                } while (randomRecipe == originalRecipe);
+                randomRecipe.displayRecipe();
+                break;
+            } else if (response.equals("no")){
+                System.out.println("No Problem. Happy Cooking!");
+                break;
+            } else {
+                System.out.print("Invalid input. Please enter 'yes' or 'no': ");
+
+            }
+        }
+    }
 }
+
 
 
 /*
