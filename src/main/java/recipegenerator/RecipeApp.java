@@ -31,7 +31,11 @@ public class RecipeApp {
             response = scanner.nextLine().toLowerCase();
 
             if (response.equals("yes")){
-                Recipe randomRecipe = InputHandler.getRandomRecipe();
+                Recipe randomRecipe;
+                // do while loop to ensure the random recipe isn't the same as the recipe before
+                do {
+                    randomRecipe = InputHandler.getRandomRecipe();
+                } while (randomRecipe == recipe);
                 randomRecipe.displayRecipe();
                 break;
             } else if (response.equals("no")){
@@ -48,4 +52,4 @@ public class RecipeApp {
     }
 }
 
-//TODO - make sure random recipe isn't the same as the previous recipe displayed
+
