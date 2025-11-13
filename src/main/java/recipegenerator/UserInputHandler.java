@@ -117,6 +117,22 @@ public class UserInputHandler {
             return creamyGarlicButterChicken;
         }
     }
+
+    //generate random recipe from list of recipes
+    public Recipe getRandomRecipe() {
+        Recipe[] everyRecipe = {
+                spicyVegStirFry,
+                fieryChickpeaVegCurry,
+                lightVeggieQuinoaBowl,
+                creamyMushroomAndSpinachPasta,
+                spicyGrilledChickenSalad,
+                fieryBeefAndPepperStirFry,
+                lemonHerbBakedFish,
+                creamyGarlicButterChicken
+        };
+
+        return everyRecipe[(int)(Math.random() * everyRecipe.length)];
+    }
 }
 
 

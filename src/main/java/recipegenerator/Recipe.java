@@ -45,6 +45,7 @@ public class Recipe {
 
     //display recipe
     public void displayRecipe() {
+        System.out.println("Your recipe is...");
         System.out.println("Recipe: " + name);
 
         System.out.print("Spice Level: ");

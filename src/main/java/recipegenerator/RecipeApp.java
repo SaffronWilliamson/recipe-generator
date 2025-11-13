@@ -21,10 +21,11 @@ public class RecipeApp {
 
         //generate recipe based on user preferences
         Recipe recipe = InputHandler.generateRecipe(preferences);
+
         //print recipe
         recipe.displayRecipe();
 
-        //close scanner
+
         scanner.close();
 
     }

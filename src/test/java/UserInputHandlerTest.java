@@ -1,7 +1,9 @@
 import org.junit.jupiter.api.Test;
+import recipegenerator.Recipe;
 import recipegenerator.UserInputHandler;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class UserInputHandlerTest {
 
@@ -53,5 +55,13 @@ public class UserInputHandlerTest {
     void givenNoToAllOptionsReturnNonSpicyNonVegNonLowCalRecipe(){
         String[] preferences = {"no", "no", "no"};
     assertEquals("Creamy Garlic Butter Chicken", myUserInputHandler.generateRecipe(preferences).getName());
+    }
+
+    @Test
+    void testRandomRecipeAlwaysReturnsARecipe() {
+        UserInputHandler myUserInputHandler = new UserInputHandler(null);
+        Recipe recipe = myUserInputHandler.getRandomRecipe();
+        assertNotNull(recipe);
+        System.out.println(recipe.getName());
     }
 }
