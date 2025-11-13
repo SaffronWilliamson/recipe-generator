@@ -13,6 +13,7 @@ public class RecipeApp {
         //end programme if user does not want to continue and close scanner
         if (!continueProgramme) {
             scanner.close();
+            return;
         }
 
         //collect user preferences
