@@ -65,3 +65,5 @@ public class UserInputHandlerTest {
         System.out.println(recipe.getName());
     }
 }
+
+// TODO add test to make sure random recipe is different from the recipe generated from user preferences
