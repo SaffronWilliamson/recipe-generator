@@ -45,26 +45,31 @@ public class Recipe {
 
     //display recipe
     public void displayRecipe() {
-        System.out.println("Your recipe is...");
-        System.out.println("Recipe: " + name);
+        System.out.println("\nYour recipe is...");
+        System.out.println("\n==============================");
+        System.out.println("\033[0;34m" + name.toUpperCase() + "\033[0m");
+        System.out.println("==============================");
 
-        System.out.print("Spice Level: ");
+        System.out.print("\u001B[1mSpice Level:\033[0m ");
         if (spiceLevel == 0){
-            System.out.print("Mild \uD83E\uDDCA");
+            System.out.print("Mild \uD83C\uDF36\uFE0F");
         } else {
             for(int i = 0; i < spiceLevel; i++) {
                 System.out.print("\uD83C\uDF36\uFE0F");
             }
         }
 
-        System.out.println("\nServes: " + serves);
-        System.out.println("Calories: " + calories);
-        System.out.println("Cooking Time: " + cookingTime + " minutes");
-        System.out.println("Ingredients: ");
+        System.out.println("\n\u001B[1m\uD83D\uDC65Serves:\033[0m " + serves);
+        System.out.println("\u001B[1m⚖\uFE0FCalories:\033[0m " + calories);
+        System.out.println("\u001B[1m⏰Cooking Time:\033[0m " + cookingTime + " minutes");
+        System.out.println("------------------------------");
+        System.out.println("\u001B[1m\uD83D\uDCCBIngredients:\033[0m ");
         for (String ingredient : ingredients) {
             System.out.println("- " + ingredient);
         }
-        System.out.println("Instructions:\n" + instructions);
+        System.out.println("------------------------------");
+        System.out.println("\u001B[1m\uD83D\uDC69\u200D\uD83C\uDF73Instructions:\033[0m\n" + instructions);
+        System.out.println("------------------------------");
     }
 }
 

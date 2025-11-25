@@ -10,16 +10,16 @@ public class GreetingPage {
         System.out.print("Before we get started, please enter your first name: ");
         String firstName = scanner.nextLine();
         //ask user if they want to continue
-        System.out.print("\n\uD83D\uDC4BHey " + firstName + "\uD83D\uDC4BAre you ready to generate a recipe? (yes/no): ");
+        System.out.print("\n\uD83D\uDC4BHey " + firstName + "\uD83D\uDC4B \nAre you ready to generate a recipe? (yes/no): ");
 
         //provide message if user wants to continue or not
         while (true) {
             String answer = scanner.nextLine();
-            if (answer.equalsIgnoreCase("yes")) {
+            if (answer.charAt(0) == 'y') {
                 System.out.println("\nGreat! Let's get started...");
                 return true;
-            } else if (answer.equalsIgnoreCase("no")) {
-                System.out.println("\nThat's okay, maybe another time. Goodbye!");
+            } else if (answer.charAt(0) == 'n') {
+                System.out.println("\nThat's okay, maybe another time. Goodbye!\uD83D\uDC4B");
                 return false;
             } else {
                 System.out.print("\nInvalid input. Please enter 'yes' or 'no': ");

@@ -106,19 +106,19 @@ public class UserInputHandler {
         String spicy = preferences[1];
         String lowCal = preferences[2];
 
-        if (veg.equalsIgnoreCase("yes") && spicy.equalsIgnoreCase("yes") && lowCal.equalsIgnoreCase("yes")) {
+        if (veg.charAt(0) == 'y' && spicy.charAt(0) == 'y' && lowCal.charAt(0) == 'y') {
             return spicyVegStirFry;
-        } else if (veg.equalsIgnoreCase("yes") && spicy.equalsIgnoreCase("yes")) {
+        } else if (veg.charAt(0) == 'y' && spicy.charAt(0) == 'y') {
             return fieryChickpeaVegCurry;
-        } else if (veg.equalsIgnoreCase("yes") && lowCal.equalsIgnoreCase("yes")) {
+        } else if (veg.charAt(0) == 'y' && lowCal.charAt(0) == 'y') {
             return lightVeggieQuinoaBowl;
-        } else if (veg.equalsIgnoreCase("yes")) {
+        } else if (veg.charAt(0) == 'y') {
             return creamyMushroomAndSpinachPasta;
-        } else if (spicy.equalsIgnoreCase("yes") && lowCal.equalsIgnoreCase("yes")) {
+        } else if (spicy.charAt(0) == 'y' && lowCal.charAt(0) == 'y') {
             return spicyGrilledChickenSalad;
-        } else if (spicy.equalsIgnoreCase("yes")) {
+        } else if (spicy.charAt(0) == 'y') {
             return fieryBeefAndPepperStirFry;
-        } else if (lowCal.equalsIgnoreCase("yes")) {
+        } else if (lowCal.charAt(0) == 'y') {
             return lemonHerbBakedFish;
         } else {
             return creamyGarlicButterChicken;
@@ -147,7 +147,7 @@ public class UserInputHandler {
         while(true) {
             response = scanner.nextLine().toLowerCase();
 
-            if (response.equals("yes")){
+            if (response.charAt(0) == 'y'){
                 Recipe randomRecipe;
                 // do while loop to ensure the random recipe isn't the same as the recipe before
                 do {
@@ -155,8 +155,8 @@ public class UserInputHandler {
                 } while (randomRecipe.equals(originalRecipe));
                 randomRecipe.displayRecipe();
                 break;
-            } else if (response.equals("no")){
-                System.out.println("No Problem. Happy Cooking!");
+            } else if (response.charAt(0) == 'n'){
+                System.out.println("No Problem. Happy Cooking!\uD83D\uDC4B");
                 break;
             } else {
                 System.out.print("Invalid input. Please enter 'yes' or 'no': ");
