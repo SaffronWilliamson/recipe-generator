@@ -58,7 +58,6 @@ public class Recipe {
                 System.out.print("\uD83C\uDF36\uFE0F");
             }
         }
-
         System.out.println("\n\u001B[1m\uD83D\uDC65Serves:\033[0m " + serves);
         System.out.println("\u001B[1m⚖\uFE0FCalories:\033[0m " + calories);
         System.out.println("\u001B[1m⏰Cooking Time:\033[0m " + cookingTime + " minutes");
@@ -72,8 +71,3 @@ public class Recipe {
         System.out.println("------------------------------");
     }
 }
-
-/*
-TODO
-- make recipe look nicely presented
- */

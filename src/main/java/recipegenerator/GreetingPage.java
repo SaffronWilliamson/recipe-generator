@@ -6,12 +6,11 @@ public class GreetingPage {
     public static boolean showGreetingPage(Scanner scanner) {
         //welcome message
         System.out.println("\u001B[35m" + "\n  \uD83D\uDC69\u200D\uD83C\uDF73 Welcome to The Recipe Generator! \uD83D\uDC68\u200D\uD83C\uDF73 \n" + "\u001B[0m");
-        //first name
         System.out.print("Before we get started, please enter your first name: ");
         String firstName = scanner.nextLine();
+
         //ask user if they want to continue
         System.out.print("\n\uD83D\uDC4BHey " + firstName + "\uD83D\uDC4B \nAre you ready to generate a recipe? (yes/no): ");
-
         //provide message if user wants to continue or not
         while (true) {
             String answer = scanner.nextLine();
@@ -27,10 +26,3 @@ public class GreetingPage {
         }
     }
 }
-
-/*
-TODO
-- make this page look nicely presented
--error handle
--make sure inputs/outputs and clear and readable in the console
-*/

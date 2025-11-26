@@ -16,10 +16,8 @@ public class UserInputHandler {
 
         System.out.println("Would you like a vegetarian recipe? (yes/no)");
         userPreferences[0] = scanner.nextLine();
-
         System.out.println("Would you like it to be spicy? (yes/no)");
         userPreferences[1] = scanner.nextLine();
-
         System.out.println("Would you like it to be low calorie? (yes/no)");
         userPreferences[2] = scanner.nextLine();
 
@@ -137,18 +135,19 @@ public class UserInputHandler {
                 lemonHerbBakedFish,
                 creamyGarlicButterChicken
         };
-
         return everyRecipe[(int)(Math.random() * everyRecipe.length)];
     }
 
     public void displayRandomRecipe(Recipe originalRecipe){
         String response;
         System.out.println("Would you like a bonus random recipe? (yes/no)");
+
         while(true) {
             response = scanner.nextLine().toLowerCase();
 
             if (response.charAt(0) == 'y'){
                 Recipe randomRecipe;
+
                 // do while loop to ensure the random recipe isn't the same as the recipe before
                 do {
                     randomRecipe = getRandomRecipe();
@@ -160,18 +159,7 @@ public class UserInputHandler {
                 break;
             } else {
                 System.out.print("Invalid input. Please enter 'yes' or 'no': ");
-
             }
         }
     }
 }
-
-
-
-/*
-TODO
--make this page look nicely presented
--error handle
--make sure inputs/outputs and clear and readable in the console
- */
-

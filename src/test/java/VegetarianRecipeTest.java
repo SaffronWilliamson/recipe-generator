@@ -10,5 +10,4 @@ public class VegetarianRecipeTest {
         assertTrue(myVegetarianRecipe.isVeggie());
         System.out.println("It is " + myVegetarianRecipe.isVeggie() + " that " + myVegetarianRecipe.getName() + " is veggie!");
     }
-
 }

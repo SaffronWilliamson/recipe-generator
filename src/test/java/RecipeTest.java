@@ -21,8 +21,7 @@ public class RecipeTest {
     void testProgrammeDisplaysMildOption(){
         String[] ingredients = {"mild ingredients"};
         Recipe mildRecipe = new Recipe(
-                "mild recipe", 0, 2, 200, 25, ingredients, "mild recipe instructions"
-        );
+                "mild recipe", 0, 2, 200, 25, ingredients, "mild recipe instructions");
         mildRecipe.displayRecipe();
     }
 
@@ -30,8 +29,7 @@ public class RecipeTest {
     void testProgrammeDisplaysOneChilliSpicyOption(){
         String[] ingredients = {"One chilli spicy ingredients"};
         Recipe oneChilliRecipe = new Recipe(
-                "One chilli spicy recipe", 1, 2, 200, 25, ingredients, "One chilli spicy recipe instructions"
-        );
+                "One chilli spicy recipe", 1, 2, 200, 25, ingredients, "One chilli spicy recipe instructions");
         oneChilliRecipe.displayRecipe();
     }
 
@@ -39,8 +37,7 @@ public class RecipeTest {
     void testProgrammeDisplaysTwoChilliSpicyOption(){
         String[] ingredients = {"Two chilli spicy ingredients"};
         Recipe twoChilliRecipe = new Recipe(
-                "Two chilli spicy recipe", 2, 2, 200, 25, ingredients, "Two chilli spicy recipe instructions"
-        );
+                "Two chilli spicy recipe", 2, 2, 200, 25, ingredients, "Two chilli spicy recipe instructions");
         twoChilliRecipe.displayRecipe();
     }
 
@@ -48,11 +45,7 @@ public class RecipeTest {
     void testProgrammeDisplaysThreeChilliSpicyOption(){
         String[] ingredients = {"Three chilli spicy ingredients"};
         Recipe threeChilliRecipe = new Recipe(
-                "Three chilli spicy recipe", 3, 2, 200, 25, ingredients, "Three chilli spicy recipe instructions"
-        );
+                "Three chilli spicy recipe", 3, 2, 200, 25, ingredients, "Three chilli spicy recipe instructions");
         threeChilliRecipe.displayRecipe();
     }
-
 }
-
-//TODO - link to the ParameterizedTest maybe?? look into this

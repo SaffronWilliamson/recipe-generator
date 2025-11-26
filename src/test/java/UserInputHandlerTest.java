@@ -2,8 +2,7 @@ import org.junit.jupiter.api.Test;
 import recipegenerator.Recipe;
 import recipegenerator.UserInputHandler;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class UserInputHandlerTest {
 
@@ -59,11 +58,19 @@ public class UserInputHandlerTest {
 
     @Test
     void testRandomRecipeAlwaysReturnsARecipe() {
-        UserInputHandler myUserInputHandler = new UserInputHandler(null);
         Recipe recipe = myUserInputHandler.getRandomRecipe();
         assertNotNull(recipe);
         System.out.println(recipe.getName());
     }
-}
 
-// TODO add test to make sure random recipe is different from the recipe generated from user preferences
+    @Test
+    void testRandomRecipeIsNotTheSameAsTheOriginal(){
+        Recipe original = myUserInputHandler.generateRecipe(new String[]{"yes", "yes", "yes"});
+        //test 1000 times
+        for(int i = 0; i <= 1000; i++){
+            Recipe random = myUserInputHandler.getRandomRecipe();
+            assertNotNull(random);
+            assertTrue(!random.getName().equals(original.getName()) || random.equals(original));
+        }
+    }
+}

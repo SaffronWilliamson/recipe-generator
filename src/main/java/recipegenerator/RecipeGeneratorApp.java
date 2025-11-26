@@ -2,8 +2,9 @@ package recipegenerator;
 
 import java.util.Scanner;
 
-public class RecipeApp {
+public class RecipeGeneratorApp {
     public static void main(String[] args) {
+
         //the only scanner - is used in this class
         Scanner scanner = new Scanner(System.in);
 
@@ -30,8 +31,5 @@ public class RecipeApp {
         InputHandler.displayRandomRecipe(recipe);
 
         scanner.close();
-
     }
 }
-
-
