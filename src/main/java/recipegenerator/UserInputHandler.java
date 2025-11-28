@@ -68,7 +68,7 @@ public class UserInputHandler {
             25,
             new String[]{"Chicken breast", "Mixed greens", "Cherry tomatoes", "Cucumber", "Red chilli flakes", "Lime juice", "Olive oil"},
             "1. Season chicken breast with chilli flakes, salt, and pepper.\n2. Grill chicken until fully cooked, about 6-8 minutes per side.\n3. Toss mixed greens, cherry tomatoes, and cucumber with lime juice and olive oil.\n4. Slice grilled chicken and place on top of salad.\n5. Serve immediately.",
-            "chicken");
+            "Chicken");
     Recipe fieryBeefAndPepperStirFry = new MeatRecipe(
             "Fiery Beef & Pepper Stir-fry",
             3,
@@ -77,7 +77,7 @@ public class UserInputHandler {
             30,
             new String[]{"Beef strips", "Bell peppers", "Onion", "Garlic", "Ginger", "Chilli sauce", "Soy sauce", "Sesame oil"},
             "1. Sauté garlic and ginger in sesame oil until fragrant.\n2. Add beef strips and cook until browned.\n3. Toss in sliced bell peppers and onions; stir-fry 5-7 minutes.\n4. Add chili sauce and soy sauce; cook another 3 minutes.\n5. Serve hot over rice or noodles.",
-            "beef");
+            "Beef");
     Recipe lemonHerbBakedFish = new MeatRecipe(
             "Lemon Herb Baked Fish",
             0,
@@ -86,7 +86,7 @@ public class UserInputHandler {
             20,
             new String[]{"White fish fillets", "Lemon juice", "Garlic", "Parsley", "Olive oil", "Salt", "Pepper"},
             "1. Preheat oven to 180°C (350°F).\n2. Place fish fillets on a baking tray and drizzle with olive oil and lemon juice.\n3. Sprinkle minced garlic, chopped parsley, salt, and pepper over the fish.\n4. Bake for 12-15 minutes, or until fish is cooked through.\n5. Serve with steamed vegetables or a side salad.",
-            "white fish");
+            "White fish");
     Recipe creamyGarlicButterChicken = new MeatRecipe(
             "Creamy Garlic Butter Chicken",
             0,
@@ -95,7 +95,7 @@ public class UserInputHandler {
             35,
             new String[]{"Chicken thighs", "Garlic", "Butter", "Heavy cream", "Parmesan cheese", "Parsley", "Olive oil"},
             "1. Season chicken thighs with salt and pepper.\n2. Sear chicken in olive oil until golden brown on both sides.\n3. Remove chicken and sauté minced garlic in butter.\n4. Add heavy cream and Parmesan cheese, stirring until smooth.\n5. Return chicken to the pan and simmer until cooked through.\n6. Garnish with parsley and serve with mashed potatoes or bread.",
-            "chicken");
+            "Chicken");
 
 
     //generate recipe based on user preferences
@@ -104,6 +104,7 @@ public class UserInputHandler {
         String spicy = preferences[1];
         String lowCal = preferences[2];
 
+        //check user preferences
         if (veg.charAt(0) == 'y' && spicy.charAt(0) == 'y' && lowCal.charAt(0) == 'y') {
             return spicyVegStirFry;
         } else if (veg.charAt(0) == 'y' && spicy.charAt(0) == 'y') {
@@ -143,7 +144,12 @@ public class UserInputHandler {
         System.out.println("Would you like a bonus random recipe? (yes/no)");
 
         while(true) {
-            response = scanner.nextLine().toLowerCase();
+            response = scanner.nextLine().trim().toLowerCase();
+
+            if(response.isEmpty()) {
+                System.out.println("Invalid input. Please enter 'yes' or 'no': ");
+                continue;
+            }
 
             if (response.charAt(0) == 'y'){
                 Recipe randomRecipe;
@@ -153,6 +159,7 @@ public class UserInputHandler {
                     randomRecipe = getRandomRecipe();
                 } while (randomRecipe.equals(originalRecipe));
                 randomRecipe.displayRecipe();
+                System.out.println("❤\uFE0FThank you for using this Recipe Generator. Happy cooking!\uD83C\uDF7D\uFE0F");
                 break;
             } else if (response.charAt(0) == 'n'){
                 System.out.println("No Problem. Happy Cooking!\uD83D\uDC4B");
