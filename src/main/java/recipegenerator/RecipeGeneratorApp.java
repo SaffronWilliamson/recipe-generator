@@ -2,6 +2,12 @@ package recipegenerator;
 
 import java.util.Scanner;
 
+/*
+Main class to run the programme.
+Guides thr user through the programme and generates a recipe based on user preferences.
+Optionally provides a bonus recipe if the user wants one.
+ */
+
 public class RecipeGeneratorApp {
     public static void main(String[] args) {
 

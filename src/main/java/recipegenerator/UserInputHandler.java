@@ -2,6 +2,11 @@ package recipegenerator;
 
 import java.util.Scanner;
 
+/*
+This class is used to handle the user input.
+Ensures that the user input is valid and returned in a consistent format.
+ */
+
 public class UserInputHandler {
     private Scanner scanner;
 

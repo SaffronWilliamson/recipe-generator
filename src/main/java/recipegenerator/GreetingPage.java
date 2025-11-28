@@ -2,6 +2,12 @@ package recipegenerator;
 
 import java.util.Scanner;
 
+/*
+Displays the welcome message, asks the user if they want to continue.
+Used to keep the user interface clean.
+ */
+
+//shows the initial welcome message and explains the purpose of the programme
 public class GreetingPage {
     public static boolean showGreetingPage(Scanner scanner) {
         //welcome message

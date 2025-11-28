@@ -1,5 +1,10 @@
 package recipegenerator;
 
+/*
+This class is used to create a vegetarian recipe.
+It extends the Recipe class.
+ */
+
 public class VegetarianRecipe extends Recipe {
     private boolean isVeggie;
 

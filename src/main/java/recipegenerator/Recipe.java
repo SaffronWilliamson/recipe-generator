@@ -1,5 +1,12 @@
 package recipegenerator;
 
+/*
+This class is the parent class for all recipes.
+It stores the name, spice level, serves, calories, cooking time, ingredients, and instructions of a recipe.
+It requires subclasses to implement the displayRecipe method.
+It also provides a method to display the recipe.
+ */
+
 public class Recipe {
     private String name;
     private int spiceLevel;
@@ -43,7 +50,7 @@ public class Recipe {
         return instructions;
     }
 
-    //display recipe
+    //method to display recipe in a user-friendly way
     public void displayRecipe() {
         System.out.println("\nYour recipe is...");
         System.out.println("\n==============================");

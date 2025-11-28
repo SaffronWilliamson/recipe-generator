@@ -1,5 +1,10 @@
 package recipegenerator;
 
+/*
+Represents a meat recipe.
+It extends the Recipe class.
+ */
+
 public class MeatRecipe extends Recipe{
     private String meatType;
 
