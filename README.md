@@ -19,10 +19,18 @@
 - MeatRecipe.java: Concrete class representing a meat recipe
 - VegetarianRecipe.java: Concrete class representing a vegetarian recipe
 
+**Installation:**
+1. Clone the repository from GitHub: https://github.com/SaffronWilliamson/recipe-generator.git
+2. open the project in your preferred Java IDE
+3. run the RecipeGeneratorApp.java file
+
+**Usage:**
+- Follow the on-screen instructions to answer the questions about your dietary preferences, spice tolerance, and calorie requirements.
+- The application will generate a personalised recipe based on your answers.
+- Optionally, you can generate a random bonus recipe for a different meal.
+
 **Author:**
 Saffron Williamson
 6G4Z0044 – Introduction to Programming
 
 
-**Git:**
-- https://github.com/SaffronWilliamson/recipe-generator
