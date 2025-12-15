@@ -73,4 +73,15 @@ public class UserInputHandlerTest {
             assertTrue(!random.getName().equals(original.getName()) || random.equals(original));
         }
     }
+
+    @Test
+    void testGetUSerPreferencesInputCorrectly() {
+        String userInput = "yes\n" + "no\n" + "yes\n";
+        System.setIn(new java.io.ByteArrayInputStream(userInput.getBytes()));
+        UserInputHandler userInputHandler = new UserInputHandler(new java.util.Scanner(System.in));
+        String[] preferences = userInputHandler.getUserPreferences();
+        assertEquals("yes", preferences[0]);
+        assertEquals("no", preferences[1]);
+        assertEquals("yes", preferences[2]);
+    }
 }
